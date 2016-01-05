@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gengo/grpc-gateway/utilities"
 	"github.com/gengo/grpc-gateway/protoc-gen-grpc-gateway/httprule"
+	"github.com/gengo/grpc-gateway/utilities"
 	descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
 )
 
@@ -258,8 +258,8 @@ var (
 		// FieldDescriptorProto_TYPE_GROUP
 		// FieldDescriptorProto_TYPE_MESSAGE
 		// FieldDescriptorProto_TYPE_BYTES
-		// TODO(yugui) Handle bytes
 		descriptor.FieldDescriptorProto_TYPE_UINT32: "runtime.Uint32",
+		descriptor.FieldDescriptorProto_TYPE_BYTES:  "runtime.Bytes",
 		// FieldDescriptorProto_TYPE_ENUM
 		// TODO(yugui) Handle Enum
 		descriptor.FieldDescriptorProto_TYPE_SFIXED32: "runtime.Int32",
@@ -283,6 +283,7 @@ var (
 		// FieldDescriptorProto_TYPE_BYTES
 		// TODO(yugui) Handle bytes
 		descriptor.FieldDescriptorProto_TYPE_UINT32: "runtime.Uint32P",
+		descriptor.FieldDescriptorProto_TYPE_BYTES:  "runtime.Bytes",
 		// FieldDescriptorProto_TYPE_ENUM
 		// TODO(yugui) Handle Enum
 		descriptor.FieldDescriptorProto_TYPE_SFIXED32: "runtime.Int32P",
